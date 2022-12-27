@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- favicon  -->
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-2.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <!--Feather js link-->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+        <link href="../css/style.css" rel="stylesheet" />
+        <link href="../css/tab.css" rel="stylesheet" />
+        <link href="../css/bootstrap-side-modals.css" rel="stylesheet" />
+        <link href="../css/custom_tab.css" rel="stylesheet" />
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- fontawesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <style>
+            .shadow-main {
+                box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+            }
+
+            .darkmodeactivated .shadow-main {
+                box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+            }
+
+            li .active {
+                box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+            }
+            .search-bx-2{
+                position: relative;
+                
+            }
+            .search-bx-2 .search-icn{
+                position: absolute;
+                right: 1px;
+                top: 1px;
+                padding: 8px;
+                background: #ddd;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+        </style>
+
+        <!-- JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Unnati</title>
+    </head>
+
+    <body>
+        <header class="layout-header sticky-top animate__animated animate__fadeInDown">
+            <div class="top-header shadow-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 big-screen-logo">
+                            <div class="logo-container big-screen-logo light-mood-logo">
+                                <a href="../dashboard.html"><img src="../images/logo.jpg" alt="logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-12">
+                            <div class="top-header-content">
+                                <div class="mobile-header--right d-xl-none">
+                                    <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                        <span class="mobile-menu-dash"></span>
+                                        <span class="mobile-menu-dash"></span>
+                                        <span class="mobile-menu-dash"></span>
+                                    </a>
+                                </div>
+                                <div class="profile-info-wrap">
+                                    <div class="profile-info">
+                                        <ul class="profile-cred-list">
+                                            <li class="profile-name">Akash Roy</li>
+                                            <li class="profile-desig">Operation Manager</li>
+                                        </ul>
+                                    </div>
+                                    <div class="profile-img-wrap">
+                                        <div class="profile-img-container">
+                                            <img src="../images/musk.jpg" width="40" class="dropbtn" role="button" onclick="profileFunction();" />
+                                        </div>
+                                        <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                            <ul class="pop-profile-list">
+                                                <li>
+                                                    <a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i data-feather="settings"></i>&nbsp;Settings</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container-fluid">
+                    <div class="header-layout">
+                        <nav class="nav-menu shadow-main">
+                            <ul class="nav-menu-list">
+                                <li><a href="../dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
+                                </li>
+                                <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                  <div class="drop-down-menu shadow-main">
+                                      <ul>
+                                          <li><a href="#"> Work</a></li>
+                                          <li><a href="#"> Gift Management</a></li>
+                                          <li><a href="#"> Reporting</a></li>
+                                          <li><a href="../fundraising/add-constituent.html"> Add Constituent</a></li>
+                                      <li><a href="../fundraising/donation-summary.html"> Donation Summary</a></li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              <li><a class="active" href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                        <li><a href="../marketing/social.html"> Social</a></li>
+                                        <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                            <div class="drop-down-menu-2 shadow-main">
+                                                <ul>
+                                                    <li><a href="./compose-email.html">Compose Email</a></li>
+                                                    <li><a href="./sent-email.html"> Sent Email</a></li>
+                                                    <li><a href="./email-groups.html">Email Groups</a></li>
+                                                    <li><a href="./email-templates.html">Email Templates</a></li>
+                                                    <li><a href="./unsubscribed-users.html">Unsubscribed Users</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                            <div class="drop-down-menu-2 shadow-main">
+                                                <ul>
+                                                    <li><a href="../marketing/view-events.html"> View All Events</a></li>
+                                                    <li><a href="../marketing/create-events.html"> Create An Event</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                              <div class="drop-down-menu shadow-main">
+                                  <ul>
+                                    <li><a href="../list/action.html"> Action</a></li>
+                                      <li><a href="../list/Constituent.html">Constituent</a></li>
+                                      <li><a href="../list/gift.html"> Gift</a></li>
+                                      <li><a href="../list/opportunities.html"> Opportunities</a></li>
+                                      <li><a href="../list/MOU.html"> MOU</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a  href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i>&nbsp;  Control Panel  <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                                <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                    <div class="drop-down-menu shadow-main">
+                                        <ul>
+                                            <li><a href="../add-user.html"> Add user</a></li>
+                                            <li><a href="../view-user.html"> View user</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a  href="#"><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;  Admin Area</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                    <div class="drop-down-menu shadow-main">
+                                        <ul>
+                                          <li><a href="">News</a></li>
+                                            <li><a href="#">Events</a></li>
+                                            <li><a href="#">Media</a></li>
+                                            <li><a href="#"> Awards</a></li>
+                                            <li><a href="#"> Sponsered Projects</a></li>
+                                            <li><a href="#"> Newsletter</a></li>
+                                            <li><a href="#"> Our Team</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
+        <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+            <!-- Start Offcanvas Header -->
+            <div class="offcanvas-header text-right">
+                <div class="logo-container">
+                    <a href="./dashboard.html"><img src="./images/logo.jpg" alt="titan-logo" class="img-fluid" /></a>
+                </div>
+                <div class="">
+                    <button class="offcanvas-close"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <!-- End Offcanvas Header -->
+            <!-- Start Offcanvas Mobile Menu Wrapper -->
+            <div class="offcanvas-mobile-menu-wrapper">
+                <!-- Start Mobile Menu Center -->
+                <div class="mobile-menu-center">
+                    <!-- Start Mobile Menu Nav -->
+                    <div class="offcanvas-menu">
+                        <ul>
+                            <li><a href="./dashboard.html">dashboard</a></li>
+
+                            <li>
+                                <a href="#"><span>Fundraising</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="#"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Marketing</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Social</a></li>
+                                    <li><a href="#"> Email</a></li>
+                                    <li><a href="#"> Events</a>
+                                        <ul class="mobile-sub-menu">
+                                            <li><a href="./view-events.html"> View All Events</a></li>
+                                            <li><a href="./create-events.html"> Create An Event</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>List</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Action</a></li>
+                                    <li><a href="./Constituent.html">Constituent</a></li>
+                                    <li><a href="#"> Gift</a></li>
+                                    <li><a href="#"> Opportunities</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Control Panel</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>user management</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="./add-user.html">add user</a></li>
+                                    <li><a href="./view-user.html">view user</a></li>
+                                    <!-- <li><a href="../user/external-user.html">external user</a></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Mobile Menu Nav -->
+                </div>
+                <!-- End Mobile Menu Center -->
+            </div>
+            <!-- End Offcanvas Mobile Menu Wrapper -->
+        </div>
+        <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+        <section class="layout-body">
+            <div class="container-fluid">
+                    <div class="card-wrap main_panel shadow-main">
+                        <div class="card-wrap-body cus-body-wrap">
+                            <div class="all-wrap mt-2 view-event-cont animate__animated animate__zoomIn">
+                                <h5 class="mb-2"><span style="color: #008ff8;">50</span>&nbsp;&nbsp;Events</h5>
+                                <div class="note-cntnt p-2 mb-0 d-flex">
+                                        <button type="button" class="custom-btn custom-success-btn me-2"><i class="fa fa-plus-circle" aria-hidden="true"></i> &nbsp;Add Event</button>
+                                        <button type="button" class="custom-btn custom-pri-btn me-2"><i class="fa fa-filter" aria-hidden="true"></i></button>
+                                        <button type="button" class="custom-btn primary-btn me-2"><i class="fa fa-columns" aria-hidden="true"></i> &nbsp;Columns</button>
+                                        <button type="button" class="custom-btn excel-btn me-2"><i class="fa fa-file-excel-o" aria-hidden="true"></i> &nbsp;Excel</button>
+                                        <div class="search-bx-2 p-0">
+                                            <input type="text" class="form-control search-input" placeholder="Find In This List">
+                                            <span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <ul style="border: 1px solid rgba(0, 0, 0, 0.2);">
+                                        <li class="note-cntnt header-body-bg mb-0 p-2">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    Event Name
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Catagory
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Start Date
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Capacity
+                                                </div>
+                                                <div class="col-md-2">
+                                                    Venue
+                                                </div>
+                                                <div class="col-md-2">
+                                                    No. Of Registration
+                                                </div>
+                                                <div class="col-md-2">
+                                                    No. Of Guests
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Action
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="note-cntnt mb-0 p-2">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <a href="./event-details.html" class="dark-txt">Golden Jubilee Reunion Of Class 1970</a>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Social
+                                                </div>
+                                                <div class="col-md-1">
+                                                    01/08/2022
+                                                </div>
+                                                <div class="col-md-1">
+                                                    333
+                                                </div>
+                                                <div class="col-md-2">
+                                                    University Campus
+                                                </div>
+                                                <div class="col-md-2">
+                                                   200
+                                                </div>
+                                                <div class="col-md-2">
+                                                    300
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <div class="dropstart kebab">
+                                                        <button class="show" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu kebab-dropdwn" aria-labelledby="dropdownMenuButton1">
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> copy</button></li>
+                                                            <!-- <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg> Cancel</button></li> -->
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</button></li>
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</button></li>
+                                                          </ul>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="note-cntnt mb-0 p-2">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <a href="./event-details.html" class="dark-txt">Golden Jubilee Reunion Of Class 1970</a>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    Social
+                                                </div>
+                                                <div class="col-md-1">
+                                                    01/08/2022
+                                                </div>
+                                                <div class="col-md-1">
+                                                    333
+                                                </div>
+                                                <div class="col-md-2">
+                                                    University Campus
+                                                </div>
+                                                <div class="col-md-2">
+                                                   200
+                                                </div>
+                                                <div class="col-md-2">
+                                                    300
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <div class="dropstart kebab">
+                                                        <button class="show" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu kebab-dropdwn" aria-labelledby="dropdownMenuButton1">
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> copy</button></li>
+                                                            <!-- <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg> Cancel</button></li> -->
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</button></li>
+                                                            <li><button class="dropdown-iteam"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</button></li>
+                                                          </ul>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </section>
+
+        <script>
+            feather.replace();
+        </script>
+
+        <!--Toggle js-->
+        <script src="../js/toggle.js"></script>
+        <script src="../js/mobile_toggle.js"></script>
+        <script src="../js/collapse.js"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

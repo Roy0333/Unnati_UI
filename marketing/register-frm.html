@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-2.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--Feather js link-->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/tab.css" rel="stylesheet">
+    <link href="../css/bootstrap-side-modals.css" rel="stylesheet">
+    <link href="../css/custom_tab.css" rel="stylesheet">
+    <link href="../css/heroes.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+        }
+
+        .darkmodeactivated .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+        }
+
+        li .active {
+            box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+        }
+        
+      
+    
+    </style>
+
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Unnati</title>
+</head>
+
+<body>
+    <header class="layout-header sticky-top animate__animated animate__fadeInDown">
+        <div class="top-header shadow-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 big-screen-logo">
+                        <div class="logo-container big-screen-logo light-mood-logo">
+                            <a href="../dashboard.html"><img src="../images/logo.jpg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="top-header-content">
+                            <div class="mobile-header--right d-xl-none">
+                                <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                </a>
+                            </div>
+                            <div class="profile-info-wrap">
+                                <div class="profile-info">
+                                    <ul class="profile-cred-list">
+                                        <li class="profile-name">Akash Roy</li>
+                                        <li class="profile-desig">Operation Manager</li>
+                                    </ul>
+                                </div>
+                                <div class="profile-img-wrap">
+                                    <div class="profile-img-container">
+                                        <img src="../images/musk.jpg" width="40" class="dropbtn" role="button"
+                                            onclick="profileFunction();">
+                                    </div>
+                                    <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                        <ul class="pop-profile-list">
+                                            <li><a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                            </li>
+                                            <li><a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a></li>
+                                            <li><a href="#"><i data-feather="settings"></i>&nbsp;Settings</a></li>
+                                            <li><a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="container-fluid">
+                <div class="header-layout">
+                    <nav class="nav-menu shadow-main">
+                        <ul class="nav-menu-list">
+                            <li><a href="../dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
+                            </li>
+                            <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                              <div class="drop-down-menu shadow-main">
+                                  <ul>
+                                      <li><a href="#"> Work</a></li>
+                                      <li><a href="#"> Gift Management</a></li>
+                                      <li><a href="#"> Reporting</a></li>
+                                      <li><a href="../fundraising/add-constituent.html"> Add Constituent</a></li>
+                                      <li><a href="../fundraising/donation-summary.html"> Donation Summary</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a class="active" href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="../marketing/social.html"> Social</a></li>
+                                    <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="./compose-email.html">Compose Email</a></li>
+                                                <li><a href="./sent-email.html"> Sent Email</a></li>
+                                                <li><a href="./email-groups.html">Email Groups</a></li>
+                                                <li><a href="./email-templates.html">Email Templates</a></li>
+                                                <li><a href="./unsubscribed-users.html">Unsubscribed Users</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="../marketing/view-events.html"> View All Events</a></li>
+                                                <li><a href="../marketing/create-events.html"> Create An Event</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                          <div class="drop-down-menu shadow-main">
+                              <ul>
+                                <li><a href="../list/action.html"> Action</a></li>
+                                  <li><a href="../list/Constituent.html">Constituent</a></li>
+                                  <li><a href="../list/gift.html"> Gift</a></li>
+                                  <li><a href="../list/opportunities.html"> Opportunities</a></li>
+                                  <li><a href="../list/MOU.html"> MOU</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li><a  href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i>&nbsp;  Control Panel  <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                        <div class="drop-down-menu shadow-main">
+                            <ul>
+                                <li><a href="#"> Security</a></li>
+                                <li><a href="#"> Settings</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                            <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                        <li><a href="../add-user.html"> Add user</a></li>
+                                        <li><a href="../view-user.html"> View user</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a  href="#"><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;  Admin Area</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                      <li><a href="">News</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Media</a></li>
+                                        <li><a href="#"> Awards</a></li>
+                                        <li><a href="#"> Sponsered Projects</a></li>
+                                        <li><a href="#"> Newsletter</a></li>
+                                        <li><a href="#"> Our Team</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
+    <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+        <!-- Start Offcanvas Header -->
+        <div class="offcanvas-header text-right">
+            <div class="logo-container">
+                <a href="./dashboard.html"><img src="./images/logo.jpg" alt="titan-logo" class="img-fluid"></a>
+            </div>
+            <div class="">
+                <button class="offcanvas-close"><i class="fa fa-times"></i></button>
+            </div>
+        </div> <!-- End Offcanvas Header -->
+        <!-- Start Offcanvas Mobile Menu Wrapper -->
+        <div class="offcanvas-mobile-menu-wrapper">
+            <!-- Start Mobile Menu Center -->
+            <div class="mobile-menu-center">
+                <!-- Start Mobile Menu Nav -->
+                <div class="offcanvas-menu">
+                    <ul>
+                        <li><a href="./dashboard.html">dashboard</a></li>
+
+                        <li><a href="#"><span>Fundraising</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="#"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><span>Marketing</span></a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="#"> Social</a></li>
+                                        <li><a href="#"> Email</a></li>
+                                        <li><a href="#"> Events</a>
+                                            <ul class="mobile-sub-menu">
+                                                <li><a href="./view-events.html"> View All Events</a></li>
+                                                <li><a href="./create-events.html"> Create An Event</a></li>
+                                            </ul>
+                                        </li>
+                            </ul>
+                    </li>
+                    <li><a href="#"><span>List</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Action</a></li>
+                              <li><a href="./Constituent.html">Constituent</a></li>
+                              <li><a href="#"> Gift</a></li>
+                              <li><a href="#"> Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span>Control Panel</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#"><span>user management</span></a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="./add-user.html">add user</a></li>
+                                <li><a href="./view-user.html">view user</a></li>
+                                <!-- <li><a href="../user/external-user.html">external user</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div> <!-- End Mobile Menu Nav -->
+
+
+            </div> <!-- End Mobile Menu Center -->
+        </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+    </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+    <section class="layout-body ">
+        <div class="container-fluid">
+                    <div class="card-wrap shadow-main">
+                        <div class="card-wrap-body pb-0 cus-body-wrap">
+                            <div class="all-wrap pb-0 view-platform-div mt-2 animate__animated animate__zoomIn">
+
+                               <div class="top-bnr-img curve-border">
+                                <div class="container col-xxl-8 px-4 py-5">
+                                    <div class="row align-items-center g-5 py-5">
+                                      <div class="col-lg-12">
+                                        <h3 class="display-5 lh-1 mb-3">Registration Form<h1>
+
+                                        <a href="./view-events.html"><span><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>&nbsp; All Events</a>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-1-sec">
+                               <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <label class="frm-label">First Name</label>
+                                    <label class="frm-lable-val">Akash</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="frm-label">Last Name</label>
+                                    <label class="frm-lable-val">Roy</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="frm-label">Company <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter Company Name">
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Designation <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter Designation">
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Degree <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>B.Tech</option>
+                                        <option>M.Tech</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Department <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>Mechanical Engineering</option>
+                                        <option>Electrical Engineering</option>
+                                        <option>Civil Engineering</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Hostel <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>Hostel No. 1</option>
+                                        <option>Hostel No. 2</option>
+                                        <option>Hostel No. 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Gender <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">Country <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>India</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">City <span style="color: red;">*</span></label>
+                                    <select class="form-control">
+                                        <option>Select</option>
+                                        <option>Mumbai</option>
+                                        <option>Kolkata</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-3">
+                                    <label class="frm-label">T-Shirt Size <span style="color: red;">*</span></label>
+                                    <Input type="text" class="form-control" placeholder="Enter T-Shirt Size"/>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <button type="button" class="custom-btn custom-success-btn">Save</button>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="custom-btn custom-danger-btn">cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                    </div>
+                </div>
+            </div>            
+                
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style="width: 75%;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Register
+                <span class="light-txt d-block">Silver Jubilee Reunion </span>
+              </h5>
+             
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center;">
+             <p>How Can We Reach You?</p>
+             <span class="light-txt">Details Regarding The Registration And The Event<span class="d-block">Will Be Sent To This Email</span> </span> 
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="frm-label">Full Name <span style="color: red;">*</span></label>  
+                  <input type="text" class="form-control" placeholder="Enter Full Name"/>
+                </div>
+                <div class="col-md-12 mt-3">
+                    <label class="frm-label">Email <span style="color: red;">*</span></label>  
+                    <input type="text" class="form-control" placeholder="Enter Email"/>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <label class="frm-label">Affilliation <span style="color: red;">*</span></label>  
+                    <select class="form-control">
+                        <option>Select</option>
+                        <option>Alumni</option>
+                        <option>Student</option>
+                        <option>Staff</option>
+                        <option>Faculty</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <label class="frm-label">Phone No. <span style="color: red;">*</span></label>  
+                    <select class="form-control">
+                        <option>Select Country Code</option>
+                        <option>+91 (India)</option>
+                    </select>
+                    <input type="text" class="form-control mt-2" placeholder="Enter Phone No."/>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <label class="frm-label">How Many People Will Be Attending?</label>
+                    <div class="guest-counter">
+                        <span class="minus">-</span>
+                        <span class="num">01</span>
+                        <span class="plus aliasadd">+</span>
+                    </div>
+                    <div class="row mt-3" id="add_item_6">
+                        <div class="col-md-12" >
+                            <label class="frm-label">Guest Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Guest Name"/>
+                        </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            </div>
+            <div class="modal-footer p-0" style="border:none;">
+                
+                    <a href="#" class=" custom-btn-2 custom-success-btn" style="text-align: center;">Proceed</a>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style="width: 75%;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Register
+              </h5>
+             
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer p-0" style="border:none;">
+                
+                    <a href="#" class=" custom-btn-2 primary-btn" data-bs-toggle="modal" data-bs-target="#" style="text-align: center;">Proceed</a>
+                  
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        $(document).ready(function() {
+         $(".aliasadd").click(function(e){
+            e.preventDefault();
+            $("#add_item_6").append('<div class="row"><div class="col-md-12 mt-3" id="add_item_6"><label class="frm-label">Guest Name </label><input type="text" class="form-control" placeholder="Enter Guest Name"/></div><div class="col-md-1 col-12 right-div-cntrl mt-2"> <a href="" class="custom-btn custom-danger-btn remove-itm-btn" id="aliasadd"><i class="fa fa-trash" aria-hidden="true"></i></a> </div></div>');
+            
+          });
+          $(document).on('click', '.remove-itm-btn', function(e){
+            e.preventDefault();
+            let row_item = $(this).parent().parent();
+            $(row_item).remove();
+          })
+        });
+      </script>
+    <script>
+        const plus = document.querySelector(".plus"),
+        minus = document.querySelector(".minus"),
+        num = document.querySelector(".num");
+
+        let a = 1;
+
+        plus.addEventListener("click", ()=>{
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+            console.log(a);
+        });
+
+        minus.addEventListener("click", ()=>{
+            if(a > 1){
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+                console.log(a);
+            }
+            
+        });
+    </script>
+    <!--Toggle js-->
+    <script src="../js/toggle.js"></script>
+    <script src="../js/mobile_toggle.js"></script>
+    <script src="../js/collapse.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

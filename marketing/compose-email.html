@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- favicon  -->
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-2.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <!--Feather js link-->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+        <link href="../css/style.css" rel="stylesheet" />
+        <link href="../css/tab.css" rel="stylesheet" />
+        <link href="../css/bootstrap-side-modals.css" rel="stylesheet" />
+        <link href="../css/custom_tab.css" rel="stylesheet" />
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- fontawesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <style>
+            .shadow-main {
+                box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+            }
+
+            .darkmodeactivated .shadow-main {
+                box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+            }
+
+            li .active {
+                box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+            }
+            .search-bx-2{
+                position: relative;
+                
+            }
+            .search-bx-2 .search-icn{
+                position: absolute;
+                right: 1px;
+                top: 1px;
+                padding: 8px;
+                background: #ddd;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+        </style>
+
+        <!-- JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Unnati</title>
+    </head>
+
+    <body>
+        <header class="layout-header sticky-top animate__animated animate__fadeInDown">
+            <div class="top-header shadow-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 big-screen-logo">
+                            <div class="logo-container big-screen-logo light-mood-logo">
+                                <a href="../dashboard.html"><img src="../images/logo.jpg" alt="logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-12">
+                            <div class="top-header-content">
+                                <div class="mobile-header--right d-xl-none">
+                                    <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                        <span class="mobile-menu-dash"></span>
+                                        <span class="mobile-menu-dash"></span>
+                                        <span class="mobile-menu-dash"></span>
+                                    </a>
+                                </div>
+                                <div class="profile-info-wrap">
+                                    <div class="profile-info">
+                                        <ul class="profile-cred-list">
+                                            <li class="profile-name">Akash Roy</li>
+                                            <li class="profile-desig">Operation Manager</li>
+                                        </ul>
+                                    </div>
+                                    <div class="profile-img-wrap">
+                                        <div class="profile-img-container">
+                                            <img src="../images/musk.jpg" width="40" class="dropbtn" role="button" onclick="profileFunction();" />
+                                        </div>
+                                        <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                            <ul class="pop-profile-list">
+                                                <li>
+                                                    <a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i data-feather="settings"></i>&nbsp;Settings</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container-fluid">
+                    <div class="header-layout">
+                        <nav class="nav-menu shadow-main">
+                            <ul class="nav-menu-list">
+                                <li><a href="../dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
+                                </li>
+                                <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                  <div class="drop-down-menu shadow-main">
+                                      <ul>
+                                          <li><a href="#"> Work</a></li>
+                                          <li><a href="#"> Gift Management</a></li>
+                                          <li><a href="#"> Reporting</a></li>
+                                          <li><a href="../fundraising/add-constituent.html"> Add Constituent</a></li>
+                                      <li><a href="../fundraising/donation-summary.html"> Donation Summary</a></li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              <li><a class="active" href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                        <li><a href="../marketing/social.html"> Social</a></li>
+                                        <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                            <div class="drop-down-menu-2 shadow-main">
+                                                <ul>
+                                                    <li><a href="./compose-email.html">Compose Email</a></li>
+                                                    <li><a href="./sent-email.html"> Sent Email</a></li>
+                                                    <li><a href="./email-groups.html">Email Groups</a></li>
+                                                    <li><a href="./email-templates.html">Email Templates</a></li>
+                                                    <li><a href="./unsubscribed-users.html">Unsubscribed Users</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                            <div class="drop-down-menu-2 shadow-main">
+                                                <ul>
+                                                    <li><a href="../marketing/view-events.html"> View All Events</a></li>
+                                                    <li><a href="../marketing/create-events.html"> Create An Event</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                              <div class="drop-down-menu shadow-main">
+                                  <ul>
+                                    <li><a href="../list/action.html"> Action</a></li>
+                                      <li><a href="../list/Constituent.html">Constituent</a></li>
+                                      <li><a href="../list/gift.html"> Gift</a></li>
+                                      <li><a href="../list/opportunities.html"> Opportunities</a></li>
+                                      <li><a href="../list/MOU.html"> MOU</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a  href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i>&nbsp;  Control Panel  <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                                <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                    <div class="drop-down-menu shadow-main">
+                                        <ul>
+                                            <li><a href="../add-user.html"> Add user</a></li>
+                                            <li><a href="../view-user.html"> View user</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a  href="#"><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;  Admin Area</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                    <div class="drop-down-menu shadow-main">
+                                        <ul>
+                                          <li><a href="">News</a></li>
+                                            <li><a href="#">Events</a></li>
+                                            <li><a href="#">Media</a></li>
+                                            <li><a href="#"> Awards</a></li>
+                                            <li><a href="#"> Sponsered Projects</a></li>
+                                            <li><a href="#"> Newsletter</a></li>
+                                            <li><a href="#"> Our Team</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
+        <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+            <!-- Start Offcanvas Header -->
+            <div class="offcanvas-header text-right">
+                <div class="logo-container">
+                    <a href="./dashboard.html"><img src="./images/logo.jpg" alt="titan-logo" class="img-fluid" /></a>
+                </div>
+                <div class="">
+                    <button class="offcanvas-close"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <!-- End Offcanvas Header -->
+            <!-- Start Offcanvas Mobile Menu Wrapper -->
+            <div class="offcanvas-mobile-menu-wrapper">
+                <!-- Start Mobile Menu Center -->
+                <div class="mobile-menu-center">
+                    <!-- Start Mobile Menu Nav -->
+                    <div class="offcanvas-menu">
+                        <ul>
+                            <li><a href="./dashboard.html">dashboard</a></li>
+
+                            <li>
+                                <a href="#"><span>Fundraising</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="#"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Marketing</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Social</a></li>
+                                    <li><a href="#"> Email</a></li>
+                                    <li><a href="#"> Events</a>
+                                        <ul class="mobile-sub-menu">
+                                            <li><a href="./view-events.html"> View All Events</a></li>
+                                            <li><a href="./create-events.html"> Create An Event</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>List</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Action</a></li>
+                                    <li><a href="./Constituent.html">Constituent</a></li>
+                                    <li><a href="#"> Gift</a></li>
+                                    <li><a href="#"> Opportunities</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Control Panel</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>user management</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="./add-user.html">add user</a></li>
+                                    <li><a href="./view-user.html">view user</a></li>
+                                    <!-- <li><a href="../user/external-user.html">external user</a></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Mobile Menu Nav -->
+                </div>
+                <!-- End Mobile Menu Center -->
+            </div>
+            <!-- End Offcanvas Mobile Menu Wrapper -->
+        </div>
+        <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+
+        <section class="layout-body">
+            <div class="container-fluid">
+                    <div class="card-wrap shadow-main">
+                        <div class="card-wrap-body cus-body-wrap">
+                            <div class="all-wrap Compose-email-tab-sec mt-2 animate__animated animate__zoomIn">
+                                <ul class="nav nav-tabs create-event-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#compose" type="button" role="tab" aria-controls="compose" aria-selected="true">
+                                           Compose
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#drafts" type="button" role="tab" aria-controls="drafts" aria-selected="false">
+                                            Drafts
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab" aria-controls="pending" aria-selected="false">
+                                            Pending
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sent" type="button" role="tab" aria-controls="sent" aria-selected="false">
+                                            Sent
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- tabs from here  -->
+                                <div class="tab-content " id="myTabContent">
+                                    <!-- tab 1 -->
+                                    <div class="tab-pane fade show active email-sec-tabs" id="compose" role="tabpanel" aria-labelledby="compose">
+                                        <div class="row mt-4">
+
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-1">
+                                                        <p class="right-align dark-txt">To :</p>
+                                                    </div>
+                                                    <div class="col-md-10 d-flex">
+                                                        <button type="button" class="select-btn" data-bs-toggle="modal" data-bs-target="#email-group"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Select Group</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-5">
+                                                <div class="row">
+                                                    <div class="col-md-1">
+                                                        <p class="right-align dark-txt">From :</p>
+                                                    </div>
+                                                    <div class="col-md-10 d-flex">
+                                                        <button type="button" class="select-btn" data-bs-toggle="modal" data-bs-target="#email-sender"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Select Sender</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-5">
+                                                <div class="row">
+                                                    <div class="col-md-1">
+                                                        <p class="right-align dark-txt">Subject :</p>
+                                                    </div>
+                                                    <div class="col-md-10 d-flex">
+                                                        <button type="button" class="select-btn" data-bs-toggle="modal" data-bs-target="#Add-subjct"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; Add Subject</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-5">
+                                                <div class="row">
+                                                    <div class="col-md-1">
+                                                        <p class="right-align dark-txt">Content :</p>
+                                                    </div>
+                                                    <div class="col-md-2 d-flex">
+                                                        <div class="email-content">
+                                                            <img src="../images/paper.jpg" class="img-fluid" alt="Content"/>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <a href="./email-templates.html" class="select-btn"><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp; Design Email</a>
+                                                        <button type="button" class="select-btn d-block mt-3"><i class="fa fa-link" aria-hidden="true"></i>&nbsp; Add an Attachment</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-4">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <button type="button" class="custom-btn custom-success-btn"><i class="fa fa-rocket" aria-hidden="true"></i> Send Now</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" class="custom-btn primary-btn"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule For Later</button>
+                                                    </div>
+                                                   </div>
+                                            </div>
+                                        </div>
+                                        
+                                           
+                                    
+                                    </div>
+                                    <!-- tab 2 -->
+                                    <div class="tab-pane fade create-event-tabs Guest-manager-tab" id="drafts" role="tabpanel" aria-labelledby="drafts">
+                                        
+                                        
+                                    </div>
+                                    <!-- tab 3 -->
+                                    <div class="tab-pane fade create-event-tabs" id="pending" role="tabpanel" aria-labelledby="pending">
+                                        <div class="step-wizard">
+                                            <ul class="step-wizard-list">
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status success current-event" ><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                    <span class="progress-label">Before The Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status notifications" ></span>
+                                                    <span class="progress-label light-txt">No Emails Scheduled. Click On The "+" Icon To Schedule a Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status waiting"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                                    <span class="progress-label">Days Of The Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status notifications" ></span>
+                                                    <span class="progress-label light-txt">No Emails Scheduled. Click On The "+" Icon To Schedule a Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status waiting"> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                                    <span class="progress-label">After The Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status cancel"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                                    <span class="progress-label">Before The Event</span>
+                                                </li>
+                                                <li class="step-wizard-item">
+                                                    <span class="progress-status notifications" ></span>
+                                                    <span class="progress-label light-txt">No Emails Scheduled. Click On The "+" Icon To Schedule a Event</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-sec">
+                                                <div class="row">
+                                                    <div class="col-md-1" style="border-right:1px solid rgba(0, 0, 0, 0.2) ; width: fit-content;">
+                                                        <button class="custom-btn primary-btn"  data-bs-toggle="modal" data-bs-target="#add_email_modal" style="border-radius: 50%;"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <ul class="nav nav-tabs tabs-2" id="myTab" role="tablist">
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#total_emails" type="button" role="tab" aria-controls="total_emails" aria-selected="true">Total Emails</button>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Drafts" type="button" role="tab" aria-controls="Drafts" aria-selected="false">Drafts</button>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Confirmed Emails" type="button" role="tab" aria-controls="Confirmed Emails" aria-selected="false">
+                                                                    Confirmed Emails
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 4 -->
+                                    <div class="tab-pane fade create-event-tabs" id="sent" role="tabpanel" aria-labelledby="sent">
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <button type="button" class="custom-btn primary-btn"><i class="fa fa-envelope" aria-hidden="true"></i> Print Report</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-3">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="frm-label">How Many Guests Would You Like To Have</label>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <button type="button" class="custom-btn custom-success-btn">Set a Goal</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-3">
+                                                <h4 style="padding-bottom: 5px;"><span>75%</span> Checked In</h4>
+                                                <span class="d-block light-txt"><span>75</span> Of <span>100</span> Guests Checked In</span>
+                                                <div class="custom-progress-bar">
+                                                    <div class="progress-line"><span></span></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-4">
+                                                <h4>Guest Insights</h4>
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <h5><span>53</span></h5>
+                                                        <p class="mt-1">Alumni</p>
+                                                        <span class="d-block light-txt mt-1"><span>17</span>&nbsp;Unmapped</span>
+                                                        <span class="d-block light-txt mt-1"><span>36</span>&nbsp;Mapped</span>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <h5><span>33</span></h5>
+                                                        <p class="mt-1">Student</p>
+                                                        <span class="d-block light-txt mt-1"><span>10</span>&nbsp;Unmapped</span>
+                                                        <span class="d-block light-txt mt-1"><span>23</span>&nbsp;Mapped</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-4">
+                                                <h4>Impact To Database</h4>
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <h5><span style="color: #24a19c;">+ 30</span></h5>
+                                                        <p class="mt-1">New Emails Acquired</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mt-4">
+                                                <h4>Impact To Engagement</h4>
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <h5><span style="color: #24a19c;">+ 333</span></h5>
+                                                        <p class="mt-1">New Engagement Activities Recorded</p>
+                                                        <span class="d-block light-txt mt-1"><span>0</span>&nbsp;Payments</span>
+                                                        <span class="d-block light-txt mt-1"><span>100</span>&nbsp;Guests</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="modal modal-right fade" id="right_modal_xl" tabindex="-1" role="dialog" aria-labelledby="right_modal_xl">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="chevron-right"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive light-table text-center mt-2">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Description</th>
+                                        <th>Pending Approval Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse" aria-expanded="false" aria-controls="tablecollapse"></span></td>
+                                        <td>Muti Party Payments Approval</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border: none;" class="p-0">
+                                            <div class="collapse" id="tablecollapse">
+                                                <div class="px-3 py-3">
+                                                    <table id="secondtable" class="">
+                                                        <thead class="csr_table_worklist">
+                                                            <tr>
+                                                                <th>Amount Configured</th>
+                                                                <th>No. Of Installment</th>
+                                                                <th>Grantee Name</th>
+                                                                <th>Remarks</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr data-pmid="138" data-paymentconfig="1" data-paymentinstallment="2" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">45678</td>
+                                                                <td id="installmentno" class="installmentno">2</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="138" data-paymentconfig="1" data-paymentinstallment="4" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">67769</td>
+                                                                <td id="installmentno" class="installmentno">4</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Tax</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="138" data-paymentconfig="1" data-paymentinstallment="2" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">46456</td>
+                                                                <td id="installmentno" class="installmentno">2</td>
+                                                                <td id="paymenttitle" class="paymenttitle">test</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="145" data-paymentconfig="1" data-paymentinstallment="3" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">25000</td>
+                                                                <td id="installmentno" class="installmentno">3</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="145" data-paymentconfig="1" data-paymentinstallment="3" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">1500000</td>
+                                                                <td id="installmentno" class="installmentno">3</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="145" data-paymentconfig="1" data-paymentinstallment="3" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">25000</td>
+                                                                <td id="installmentno" class="installmentno">3</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="145" data-paymentconfig="1" data-paymentinstallment="3" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">1500000</td>
+                                                                <td id="installmentno" class="installmentno">3</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-pmid="148" data-paymentconfig="1" data-paymentinstallment="1" data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                                <td id="paymentamount" class="paymentamount">234325</td>
+                                                                <td id="installmentno" class="installmentno">1</td>
+                                                                <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                                <td id="paymentremarks" class="paymentremarks"></td>
+                                                                <td>
+                                                                    <div class="form-group comment-form">
+                                                                        <div class="text-left">
+                                                                            <h6>Comment:</h6>
+                                                                            <textarea id="comment_reciept_approve_final" class="form-control my-3"></textarea>
+                                                                            <button id="approve_payment_config_btn" class="btn btn-success aprv-btn"><i class="fa fa-check" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                                                                            <button id="reject_payment_config_btn" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse2" aria-expanded="false" aria-controls="tablecollapse"></span></td>
+                                        <td>Bank Guarantee</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse3" aria-expanded="false" aria-controls="tablecollapse"></span></td>
+                                        <td>Request Letter</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right modals  -->
+
+
+        <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" >
+                <div class="modal-header d-flex">
+                  <h5 class="modal-title" id="exampleModalLabel">Select Group</h5>
+                 <button class="trasnparent-btn" data-bs-toggle="modal" data-bs-target="#create-group" style="margin-left: 200px;"><i class="fa fa-plus-circle" aria-hidden="true" style="color: #008ff8;"></i>&nbsp;Create Group</button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-bx-2 p-0 pb-3">
+                        <input type="text" class="form-control search-input" placeholder="Find In This List">
+                        <span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
+                    <ul >
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Batch Of 1976</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Batch Of 2000</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Golden Jubilee Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Silver Jubilee Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">2002 Batch Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">2001 Batch Reunion</label></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="modal-footer p-0" style="border:none;">
+                    
+                        <a href="./register-frm.html" class=" custom-btn-2 custom-success-btn" style="text-align: center;">Proceed</a>
+                      
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Create Group</h5>
+                 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <!-- <div class="modal-footer p-0" style="border:none;">
+                    
+                        <a href="./register-frm.html" class=" custom-btn-2 custom-success-btn" style="text-align: center;">Proceed</a>
+                      
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="email-group" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Group</h5>
+                   <button class="trasnparent-btn" data-bs-target="#create-group" data-bs-toggle="modal" data-bs-dismiss="modal" style="margin-left: 200px;"><i class="fa fa-plus-circle" aria-hidden="true" style="color: #008ff8;"></i>&nbsp;Create Group</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body">
+                    <div class="search-bx-2 p-0 pb-3">
+                        <input type="text" class="form-control search-input" placeholder="Find In This List">
+                        <span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
+                    <ul >
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Batch Of 1976</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Batch Of 2000</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Golden Jubilee Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">Silver Jubilee Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">2002 Batch Reunion</label></span>
+                        </li>
+                        <li class="note-cntnt pt-3">
+                            <span class="me-2"><button type="button" class="transparent-btn highlight-txt"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+                            <span class="me-3 highlight-txt"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span><label class="frm-label-val">2001 Batch Reunion</label></span>
+                        </li>
+                    </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="create-group" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Create An Email Group</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="frm-label">Group Name <span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" placeholder="Enter Group Name">
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <label class="frm-label mb-2">How Do You Want To Add Members To This Group <span style="color: red;">*</span></label>
+                            <input type="radio" name="add-group-members" class="yes"><label class="ms-2 frm-label-2">Define Segment From Directory/Choose Specific Member</label>
+                            <div class="mt-2">
+                            <input type="radio" name="add-group-members" class="no"><label class="ms-2 frm-label-2">Upload an Excel Sheet <span><a href="#" class="highlight-txt">Does This Work?</a></span></label>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12 add-member">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="frm-label">Define a Segment From Dictionary</label>
+                                            <input type="text" class="form-control">
+                                            <span class="d-block mt-2"><a href="#" class="highlight-txt">Click Here To Define Query</a></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="frm-label" style="margin-bottom: 20px;">Choose Specific Member</label>
+                                            <input type="text" class="form-control">
+                                            <span class="d-block mt-2"><a href="#" class="highlight-txt">Click Here To Select</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-5">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button type="button" class="custom-btn custom-success-btn">Save</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="custom-btn custom-danger-btn">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="email-sender" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Sender</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body">
+                    <div class="search-bx-2 p-0 pb-3">
+                        <input type="text" class="form-control search-input" placeholder="Find In This List">
+                        <span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
+                    <ul>
+                        <li class="note-cntnt pt-3 select-sndr">
+                            <div class="row">
+                                <div class="col-md-1" style="width: fit-content;">
+                                    <div class="guest-img-sec">
+                                    <img src="../images/profile.png" class="img-fluid">
+                                </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <ul>
+                                        <li><p>Akash Roy</p></li>
+                                        <li><span class="light-txt mt-2">Class Of <span>2008</span> - <span>2010</span></span></li>
+                                        <button type="button" class="custom-btn primary-btn view-prfl-btn">View Profile</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="note-cntnt pt-3 select-sndr">
+                            <div class="row">
+                                <div class="col-md-1" style="width: fit-content;">
+                                    <div class="guest-img-sec">
+                                    <img src="../images/profile.png" class="img-fluid">
+                                </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <ul>
+                                        <li><p>Samrat Ghosh</p></li>
+                                        <li><span class="light-txt mt-2">Class Of <span>2008</span> - <span>2010</span></span></li>
+                                        <button type="button" class="custom-btn primary-btn view-prfl-btn">View Profile</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="note-cntnt pt-3 select-sndr">
+                            <div class="row">
+                                <div class="col-md-1" style="width: fit-content;">
+                                    <div class="guest-img-sec">
+                                    <img src="../images/profile.png" class="img-fluid">
+                                </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <ul>
+                                        <li><p>Jhon Matt</p></li>
+                                        <li><span class="light-txt mt-2">Class Of <span>2008</span> - <span>2010</span></span></li>
+                                        <button type="button" class="custom-btn primary-btn view-prfl-btn">View Profile</button>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="Add-subjct" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Subject</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="frm-label">Subject <span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" placeholder="Enter Subject"/>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button type="button" class="custom-btn custom-success-btn">Save</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="custom-btn custom-danger-btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#email-group" role="button">Open first modal</a> -->
+        <script>
+            feather.replace();
+        </script>
+        <script>
+            
+            let yes = document.querySelector(".yes");
+            let no = document.querySelector(".no");
+            let calculatnbar = document.querySelector(".add-member");
+
+            yes.onclick = function () {
+               calculatnbar.classList.add("active");
+            };
+            no.onclick = function () {
+               calculatnbar.classList.remove("active");
+            };
+        </script>
+        <!--Toggle js-->
+        <script src="../js/toggle.js"></script>
+        <script src="../js/mobile_toggle.js"></script>
+        <script src="../js/collapse.js"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

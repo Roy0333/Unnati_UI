@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-2.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--Feather js link-->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/tab.css" rel="stylesheet">
+    <link href="../css/bootstrap-side-modals.css" rel="stylesheet">
+    <link href="../css/custom_tab.css" rel="stylesheet">
+    <link href="../css/lightbox.css" rel="stylesheet">
+    <link href="../css/screen.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+        }
+
+        .darkmodeactivated .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+        }
+
+        /* li .active {
+            box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+        } */
+        .search-bx-2{
+                position: relative;
+                
+            }
+            .search-bx-2 .search-icn{
+                position: absolute;
+                right: 1px;
+                top: 1px;
+                padding: 8px;
+                background: #ddd;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+      
+    
+    </style>
+
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Unnati</title>
+</head>
+
+<body>
+    <header class="layout-header sticky-top animate__animated animate__fadeInDown">
+        <div class="top-header shadow-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 big-screen-logo">
+                        <div class="logo-container big-screen-logo light-mood-logo">
+                            <a href="../dashboard.html"><img src="../images/logo.jpg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="top-header-content">
+                            <div class="mobile-header--right d-xl-none">
+                                <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                </a>
+                            </div>
+                            <div class="profile-info-wrap">
+                                <div class="profile-info">
+                                    <ul class="profile-cred-list">
+                                        <li class="profile-name">Akash Roy</li>
+                                        <li class="profile-desig">Operation Manager</li>
+                                    </ul>
+                                </div>
+                                <div class="profile-img-wrap">
+                                    <div class="profile-img-container">
+                                        <img src="../images/musk.jpg" width="40" class="dropbtn" role="button"
+                                            onclick="profileFunction();">
+                                    </div>
+                                    <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                        <ul class="pop-profile-list">
+                                            <li><a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                            </li>
+                                            <li><a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a></li>
+                                            <li><a href="#"><i data-feather="settings"></i>&nbsp;Settings</a></li>
+                                            <li><a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="container-fluid">
+                <div class="header-layout">
+                    <nav class="nav-menu shadow-main">
+                        <ul class="nav-menu-list">
+                            <li><a href="../dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
+                            </li>
+                            <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                              <div class="drop-down-menu shadow-main">
+                                  <ul>
+                                      <li><a href="#"> Work</a></li>
+                                      <li><a href="#"> Gift Management</a></li>
+                                      <li><a href="#"> Reporting</a></li>
+                                      <li><a href="../fundraising/add-constituent.html"> Add Constituent</a></li>
+                                      <li><a href="../fundraising/donation-summary.html"> Donation Summary</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a class="active" href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="../marketing/social.html"> Social</a></li>
+                                    <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="./compose-email.html">Compose Email</a></li>
+                                                <li><a href="./sent-email.html"> Sent Email</a></li>
+                                                <li><a href="./email-groups.html">Email Groups</a></li>
+                                                <li><a href="./email-templates.html">Email Templates</a></li>
+                                                <li><a href="./unsubscribed-users.html">Unsubscribed Users</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="../marketing/view-events.html"> View All Events</a></li>
+                                                <li><a href="../marketing/create-events.html"> Create An Event</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                          <div class="drop-down-menu shadow-main">
+                              <ul>
+                                <li><a href="../list/action.html"> Action</a></li>
+                                  <li><a href="../list/Constituent.html">Constituent</a></li>
+                                  <li><a href="../list/gift.html"> Gift</a></li>
+                                  <li><a href="../list/opportunities.html"> Opportunities</a></li>
+                                  <li><a href="../list/MOU.html"> MOU</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li><a  href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i>&nbsp;  Control Panel  <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                        <div class="drop-down-menu shadow-main">
+                            <ul>
+                                <li><a href="#"> Security</a></li>
+                                <li><a href="#"> Settings</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                            <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                        <li><a href="../add-user.html"> Add user</a></li>
+                                        <li><a href="../view-user.html"> View user</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a  href="#"><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;  Admin Area</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                      <li><a href="">News</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Media</a></li>
+                                        <li><a href="#"> Awards</a></li>
+                                        <li><a href="#"> Sponsered Projects</a></li>
+                                        <li><a href="#"> Newsletter</a></li>
+                                        <li><a href="#"> Our Team</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
+    <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+        <!-- Start Offcanvas Header -->
+        <div class="offcanvas-header text-right">
+            <div class="logo-container">
+                <a href="./dashboard.html"><img src="./images/logo.jpg" alt="titan-logo" class="img-fluid"></a>
+            </div>
+            <div class="">
+                <button class="offcanvas-close"><i class="fa fa-times"></i></button>
+            </div>
+        </div> <!-- End Offcanvas Header -->
+        <!-- Start Offcanvas Mobile Menu Wrapper -->
+        <div class="offcanvas-mobile-menu-wrapper">
+            <!-- Start Mobile Menu Center -->
+            <div class="mobile-menu-center">
+                <!-- Start Mobile Menu Nav -->
+                <div class="offcanvas-menu">
+                    <ul>
+                        <li><a href="./dashboard.html">dashboard</a></li>
+
+                        <li><a href="#"><span>Fundraising</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="#"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><span>Marketing</span></a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="#"> Social</a></li>
+                                        <li><a href="#"> Email</a></li>
+                                        <li><a href="#"> Events</a>
+                                            <ul class="mobile-sub-menu">
+                                                <li><a href="./view-events.html"> View All Events</a></li>
+                                                <li><a href="./create-events.html"> Create An Event</a></li>
+                                            </ul>
+                                        </li>
+                            </ul>
+                    </li>
+                    <li><a href="#"><span>List</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Action</a></li>
+                              <li><a href="./Constituent.html">Constituent</a></li>
+                              <li><a href="#"> Gift</a></li>
+                              <li><a href="#"> Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span>Control Panel</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Security</a></li>
+                                    <li><a href="#"> Settings</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#"><span>user management</span></a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="./add-user.html">add user</a></li>
+                                <li><a href="./view-user.html">view user</a></li>
+                                <!-- <li><a href="../user/external-user.html">external user</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div> <!-- End Mobile Menu Nav -->
+
+
+            </div> <!-- End Mobile Menu Center -->
+        </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+    </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+    <section class="layout-body ">
+        <div class="container-fluid">
+                    <div class="card-wrap shadow-main">
+                        <div class="card-wrap-body pb-0 cus-body-wrap">
+                            <div class="all-wrap pb-0 template-cont mt-2 animate__animated animate__zoomIn">
+                                <ul class="nav nav-tabs d-flex nav-tabs-2" id="myTab" role="tablist" style="justify-content: center;">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#default_templates" type="button" role="tab" aria-controls="default_templates" aria-selected="true">
+                                           Default Templates
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#saved_templates" type="button" role="tab" aria-controls="saved_templates" aria-selected="false">
+                                            Saved Templates
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- tabs from here  -->
+                                <div class="tab-content mt-4" id="myTabContent">
+                                    <!-- tab 1 -->
+                                    <div class="tab-pane fade show active email-sec-tabs" id="default_templates" role="tabpanel" aria-labelledby="default_templates">
+                                        <div class="row email-template-div">
+                                            <div class="col-md-3">
+                                                <h5 class="highlight-txt" >Catagories</h5>
+                                                <div class="search-bx-2 p-0 mt-3">
+                                                    <input type="text" class="form-control search-input" placeholder="Find In This List">
+                                                    <span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </div>
+                                                <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#compose" type="button" role="tab" aria-controls="compose" aria-selected="true">
+                                                           All Templates
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#drafts" type="button" role="tab" aria-controls="drafts" aria-selected="false">
+                                                            Announcements
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab" aria-controls="pending" aria-selected="false">
+                                                            Basics 
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sent" type="button" role="tab" aria-controls="sent" aria-selected="false">
+                                                            Events
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sent" type="button" role="tab" aria-controls="sent" aria-selected="false">
+                                                            Festivals
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sent" type="button" role="tab" aria-controls="sent" aria-selected="false">
+                                                            Guest Communication Events
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sent" type="button" role="tab" aria-controls="sent" aria-selected="false">
+                                                            News-Letters
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="tab-content" id="myTabContent">
+                                                    <!-- tab 1 -->
+                                                    <div class="tab-pane fade show active email-sec-tabs" id="compose" role="tabpanel" aria-labelledby="compose">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="template-product-sec">
+                                                                    <div class="img-sec image-set">
+                                                                        <a class="example-image-link" href="../images/paper.jpg" data-lightbox="example-set" title="Template"><img class="example-image" src="../images/paper.jpg" alt=""/></a>
+                                                                        <!-- <img src="../images/paper.jpg" class="img-fluid"> -->
+                                                                    </div>
+                                                                    <div class="temp-det">
+                                                                        <label class="frm-label-val mt-1">Golden Jubilee Reunion</label>
+                                                                        <span class="light-txt d-block">Golden Jubilee</span>
+                                                                        <a href="./editor.html" class="custom-btn primary-btn mt-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="template-product-sec">
+                                                                    <div class="img-sec image-set">
+                                                                        <a class="example-image-link" href="../images/paper.jpg" data-lightbox="example-set" title="Template"><img class="example-image" src="../images/paper.jpg" alt=""/></a>
+                                                                        <!-- <img src="../images/paper.jpg" class="img-fluid"> -->
+                                                                    </div>
+                                                                    <div class="temp-det">
+                                                                        <label class="frm-label-val mt-1">Announcement Launch</label>
+                                                                        <span class="light-txt d-block">Announcement</span>
+                                                                        <a href="./editor.html" class="custom-btn primary-btn mt-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a>
+                                                                    </div>
+                                                                </div> 
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="template-product-sec">
+                                                                    <div class="img-sec image-set">
+                                                                        <a class="example-image-link" href="../images/paper.jpg" data-lightbox="example-set" title="Template"><img class="example-image" src="../images/paper.jpg" alt=""/></a>
+                                                                        <!-- <img src="../images/paper.jpg" class="img-fluid"> -->
+                                                                    </div>
+                                                                    <div class="temp-det">
+                                                                        <label class="frm-label-val mt-1">Announcement Launch</label>
+                                                                        <span class="light-txt d-block">Announcement</span>
+                                                                        <a href="./editor.html" class="custom-btn primary-btn mt-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="template-product-sec">
+                                                                    <div class="img-sec image-set">
+                                                                        <a class="example-image-link" href="../images/paper.jpg" data-lightbox="example-set" title="Template"><img class="example-image" src="../images/paper.jpg" alt=""/></a>
+                                                                        <!-- <img src="../images/paper.jpg" class="img-fluid"> -->
+                                                                    </div>
+                                                                    <div class="temp-det">
+                                                                        <label class="frm-label-val mt-1">Announcement Launch</label>
+                                                                        <span class="light-txt d-block">Announcement</span>
+                                                                        <a href="./editor.html" class="custom-btn primary-btn mt-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                    <!-- tab 2 -->
+                                                    <div class="tab-pane fade create-event-tabs Guest-manager-tab" id="drafts" role="tabpanel" aria-labelledby="drafts">
+                                                        
+                                                    </div>
+                                                    <!-- tab 3 -->
+                                                    <div class="tab-pane fade create-event-tabs" id="pending" role="tabpanel" aria-labelledby="pending">
+                                                        
+                                                    </div>
+                                                    <!-- tab 4 -->
+                                                    <div class="tab-pane fade create-event-tabs" id="sent" role="tabpanel" aria-labelledby="sent">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 2 -->
+                                    <div class="tab-pane fade create-event-tabs Guest-manager-tab" id="saved_templates" role="tabpanel" aria-labelledby="saved_templates">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                    </div>
+                </div>
+            </div>
+                      
+                
+            </div>
+        </div>
+    </section>
+   
+        
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        $(document).ready(function() {
+         $(".aliasadd").click(function(e){
+            e.preventDefault();
+            $("#add_item_6").append('<div class="row"><div class="col-md-12 mt-3" id="add_item_6"><label class="frm-label">Guest Name </label><input type="text" class="form-control" placeholder="Enter Guest Name"/></div><div class="col-md-1 col-12 right-div-cntrl mt-2"> <a href="" class="custom-btn custom-danger-btn remove-itm-btn" id="aliasadd"><i class="fa fa-trash" aria-hidden="true"></i></a> </div></div>');
+            
+          });
+          $(document).on('click', '.remove-itm-btn', function(e){
+            e.preventDefault();
+            let row_item = $(this).parent().parent();
+            $(row_item).remove();
+          })
+        });
+      </script>
+    <script>
+        const plus = document.querySelector(".plus"),
+        minus = document.querySelector(".minus"),
+        num = document.querySelector(".num");
+
+        let a = 1;
+
+        plus.addEventListener("click", ()=>{
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+            console.log(a);
+        });
+
+        minus.addEventListener("click", ()=>{
+            if(a > 1){
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+                console.log(a);
+            }
+            
+        });
+    </script>
+    <!--Toggle js-->
+    <script src="../js/toggle.js"></script>
+    <script src="../js/mobile_toggle.js"></script>
+    <script src="../js/collapse.js"></script>
+    <script src="../js/lightbox-2.6.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
