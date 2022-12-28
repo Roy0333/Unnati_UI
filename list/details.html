@@ -102,11 +102,10 @@
         </div>
     </div>
         <div class="bottom-header">
-            
-                <div class="header-layout">
-                    <nav class="nav-menu details-page-nav shadow-main mt-0">
-                      <div class="row">
-                        <div class="col-md-10 trigger">
+            <div class="header-layout">
+                  <nav class="nav-menu details-page-nav shadow-main mt-0">
+                    <div class="row">
+                      <div class="col-md-10 trigger">
                           <ul class="nav-menu-list">
                             <div class="trigger-hide d-flex">
                             <li><a  href="../dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
@@ -119,6 +118,7 @@
                                       <li><a href="#"> Reporting</a></li>
                                       <li><a href="../fundraising/add-constituent.html"> Add Constituent</a></li>
                                       <li><a href="../fundraising/donation-summary.html"> Donation Summary</a></li>
+                                      <li><a href="./fundraising/add-mou.html"> Add MOU</a></li>
                                   </ul>
                               </div>
                           </li>
@@ -193,8 +193,8 @@
                             </div>
                             </li>
                           </ul>
-                        </div>
-                        <div class="col-md-2 p-0">
+                      </div>
+                      <div class="col-md-2 p-0">
                           <ul class="nav-menu-list">
                             <li class="m-0">
                               <div class="profile-info-wrap" style="height: 35px !important;">
@@ -228,12 +228,10 @@
                             </div>
                             </li>
                           </ul>
-                        </div>
                       </div>
-                       
-                    </nav>
-                </div>
-            
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
@@ -260,6 +258,7 @@
                               <li><a href="#"> Work</a></li>
                               <li><a href="#"> Gift Management</a></li>
                               <li><a href="#"> Reporting</a></li>
+                              <li><a href="./fundraising/add-mou.html"> Add MOU</a></li>
                           </ul>
                   </li>
                   <li><a  href="#"><span>Marketing</span></a>
@@ -3686,7 +3685,19 @@
                                             <label class="frm-label">Upload a File</label>
                                             <input type="file" class="form-control">
                                           </div>
-                                          <div class="col-md-8 mt-3">
+                                          <div class="col-md-4 col-6">
+                                            <label class="frm-label">Status</label>
+                                            <select class="form-control">
+                                              <option>Select Status</option>
+                                              <option>Active</option>
+                                              <option>Inactive</option>
+                                            </select>
+                                          </div>
+                                          <div class="col-md-4 col-6">
+                                            <label class="frm-label">MOU Ref No.</label>
+                                            <input type="number" class="form-control">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
                                             <div class="accordion" id="accordionExample">
                                               <div class="accordion-item b-none">
                                                 <h2 class="accordion-header mt-1" id="headingOne">
@@ -3698,12 +3709,23 @@
                                                   <div class="accordion-body">
                                                     <div class="row mt-3">
                                                       <div class="col-md-3">
-                                                        <label class="frm-label">1st instalment</label>
+                                                        <label class="frm-label">Purpose</label>
+                                                        <input type="text" class="form-control">
+                                                      </div>
+                                                      <div class="col-md-3">
+                                                        <label class="frm-label">Description</label>
+                                                        <input type="text" class="form-control">
+                                                      </div>
+                                                      <div class="col-md-3">
+                                                        <label class="frm-label">Follow up Date</label>
                                                         <input type="date" class="form-control">
                                                       </div>
                                                       <div class="col-md-3">
-                                                        <label class="frm-label">Set up Infrastructure</label>
-                                                        <input type="text" class="form-control">
+                                                        <label class="frm-label">Amount</label>
+                                                        <input type="number" class="form-control">
+                                                      </div>
+                                                      <div class="col-md-2 mt-2">
+                                                        <input type="button" class="custom-btn custom-danger-btn" value="Delete">
                                                       </div>
                                                     </div>
                                                   </div>
