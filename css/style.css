@@ -4740,9 +4740,9 @@ a {
   color: #6e6b7b;
 }
 
-.layout-body .card-wrap img {
-  width: 55px;
-  height: 55px;
+.layout-body .card-wrap .dashboard-icns {
+  width: 40px;
+  height: 40px;
 }
 
 .layout-body .card-wrap .card-wrap-head h5 {
