@@ -50,137 +50,123 @@
 <body>
     <div class="main-body-wrapper">
         <header class="layout-header sticky-top animate__animated animate__fadeInDown">
-            <div class="top-header shadow-main">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-2 big-screen-logo">
-                            <div class="logo-container big-screen-logo light-mood-logo">
-                                <a href="../dashboard.html"><img src="./images/logo.jpg" alt="logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-12">
-                            <div class="top-header-content">
-                                <!-- mobile menu hamburger -->
-                                <div class="mobile-header--right d-xl-none">
-                                    <a href="#m-menus" class="mobile-menu">
-                                        <span class="mobile-menu-dash"></span>
-                                        <span class="mobile-menu-dash"></span>
-                                        <span class="mobile-menu-dash"></span>
-                                    </a>
-                                </div>
-                                <div class="profile-info-wrap">
-                                    <div class="profile-info">
-                                        <ul class="profile-cred-list">
-                                            <li class="profile-name">Akash Roy</li>
-                                            <li class="profile-desig">Operation Manager</li>
-                                        </ul>
-                                    </div>
-                                    <div class="profile-img-wrap">
-                                        <div class="profile-img-container">
-                                            <img src="./images/musk.jpg" width="40" class="dropbtn" role="button"
-                                                onclick="profileFunction();">
-                                        </div>
-                                        <div id="profile-dropdown" class="dropdown-content shadow-main">
-                                            <ul class="pop-profile-list">
-                                                <li><a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
-                                                </li>
-                                                <li><a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a></li>
-                                                <li><a href="#"><i data-feather="settings"></i>&nbsp;Settings</a></li>
-                                                <li><a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-header">
-                <div class="container-fluid">
-                    <div class="header-layout">
-                        <nav class="nav-menu shadow-main">
-                            <ul class="nav-menu-list">
-                                <li><a class="active" href="./dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
-                                </li>
-                                <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
-                                <div class="drop-down-menu shadow-main">
-                                    <ul>
-                                        <li><a href="#"> Work</a></li>
-                                        <li><a href="./fundraising/gift-management.html"> Gift Management</a></li>
-                                        <li><a href="#"> Reporting</a></li>
-                                        <li><a href="./fundraising/add-constituent.html"> Add Constituent</a></li>
-                                        <li><a href="./fundraising/donation-summary.html"> Donation Summary</a></li>
-                                        <li><a href="./fundraising/add-mou.html"> Add MOU</a></li>
-                                    </ul>
-                                </div>
+            <div class="top-header container-fluid">
+                <div class="top-header-left-content">
+                    <nav class="nav-menu">
+                        <ul class="nav-menu-list">
+                            <li><a class="active" href="./dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
                             </li>
-                            <li><a  href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
-                                <div class="drop-down-menu shadow-main">
-                                    <ul>
-                                        <li><a href="./marketing/social.html"> Social</a></li>
-                                        <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
-                                            <div class="drop-down-menu-2 shadow-main" style="top: 57px;">
-                                                <ul>
-                                                    <li><a href="./marketing/compose-email.html">Compose Email</a></li>
-                                                    <li><a href="./marketing/sent-email.html"> Sent Email</a></li>
-                                                    <li><a href="./marketing/email-groups.html">Email Groups</a></li>
-                                                    <li><a href="./marketing/email-templates.html">Email Templates</a></li>
-                                                    <li><a href="./marketing/unsubscribed-users.html">Unsubscribed Users</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
-                                            <div class="drop-down-menu-2 shadow-main">
-                                                <ul>
-                                                    <li><a href="./marketing/view-events.html"> View All Events</a></li>
-                                                    <li><a href="./marketing/create-events.html"> Create An Event</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <li><a  href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
                             <div class="drop-down-menu shadow-main">
                                 <ul>
-                                    <li><a href="./list/action.html">Action</a></li>
-                                    <li><a href="./list/Constituent.html">Constituent</a></li>
-                                    <li><a href="./list/gift.html">Gift</a></li>
-                                    <li><a href="./list/opportunities.html"> Opportunities</a></li>
-                                    <li><a href="./list/MOU.html"> MOU</a></li>
-                                    <li><a href="./list/projects.html"> Projects</a></li>
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="./fundraising/gift-management.html"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                    <li><a href="./fundraising/add-constituent.html"> Add Constituent</a></li>
+                                    <li><a href="./fundraising/donation-summary.html"> Donation Summary</a></li>
+                                    <li><a href="./fundraising/add-mou.html"> Add MOU</a></li>
                                 </ul>
                             </div>
                         </li>
-                                <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
-                                    <div class="drop-down-menu shadow-main">
-                                        <ul>
-                                            <li><a href="./user-management/role.html"> Add Role</a></li>
-                                            <li><a href="./user-management/master-data.html"> Master Data</a></li>
-                                            <li><a href="./add-user.html"> Add user</a></li>
-                                            <li><a href="./view-user.html"> View user</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
-                                    <div class="drop-down-menu shadow-main">
-                                        <ul>
-                                        <li><a href="./website/news.html">News</a></li>
-                                            <li><a href="./website/events.html">Events</a></li>
-                                            <li><a href="./website/media.html">Media</a></li>
-                                            <li><a href="./website/award.html"> Awards</a></li>
-                                            <li><a href="./website/sponsored-project.html"> Sponsered Projects</a></li>
-                                            <li><a href="#"> Newsletter</a></li>
-                                            <li><a href="./website/our-team.html"> Our Team</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+                        <li><a  href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="./marketing/social.html"> Social</a></li>
+                                    <li class="drop-dwn-hvr"><a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main" style="top: 57px;">
+                                            <ul>
+                                                <li><a href="./marketing/compose-email.html">Compose Email</a></li>
+                                                <li><a href="./marketing/sent-email.html"> Sent Email</a></li>
+                                                <li><a href="./marketing/email-groups.html">Email Groups</a></li>
+                                                <li><a href="./marketing/email-templates.html">Email Templates</a></li>
+                                                <li><a href="./marketing/unsubscribed-users.html">Unsubscribed Users</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="drop-dwn-hvr"><a href="#" > Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="./marketing/view-events.html"> View All Events</a></li>
+                                                <li><a href="./marketing/create-events.html"> Create An Event</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                        <div class="drop-down-menu shadow-main">
+                            <ul>
+                                <li><a href="./list/action.html">Action</a></li>
+                                <li><a href="./list/Constituent.html">Constituent</a></li>
+                                <li><a href="./list/gift.html">Gift</a></li>
+                                <li><a href="./list/opportunities.html"> Opportunities</a></li>
+                                <li><a href="./list/MOU.html"> MOU</a></li>
+                                <li><a href="./list/projects.html"> Projects</a></li>
                             </ul>
-                        </nav>
-                    </div>
+                        </div>
+                    </li>
+                            <li><a  href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                        <li><a href="./user-management/role.html"> Add Role</a></li>
+                                        <li><a href="./user-management/master-data.html"> Master Data</a></li>
+                                        <li><a href="./add-user.html"> Add user</a></li>
+                                        <li><a href="./view-user.html"> View user</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                                <div class="drop-down-menu shadow-main">
+                                    <ul>
+                                    <li><a href="./website/news.html">News</a></li>
+                                        <li><a href="./website/events.html">Events</a></li>
+                                        <li><a href="./website/media.html">Media</a></li>
+                                        <li><a href="./website/award.html"> Awards</a></li>
+                                        <li><a href="./website/sponsored-project.html"> Sponsered Projects</a></li>
+                                        <li><a href="#"> Newsletter</a></li>
+                                        <li><a href="./website/our-team.html"> Our Team</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                <!-- <div class="col-xl-10 col-lg-12"> -->
+                    <div class="tp-header-right-content top-header-content">
+                        <!-- mobile menu hamburger -->
+                        <div class="mobile-header--right d-xl-none">
+                            <a href="#m-menus" class="mobile-menu">
+                                <span class="mobile-menu-dash"></span>
+                                <span class="mobile-menu-dash"></span>
+                                <span class="mobile-menu-dash"></span>
+                            </a>
+                        </div>
+                        <div class="profile-info-wrap">
+                            <div class="profile-info">
+                                <ul class="profile-cred-list">
+                                    <li class="profile-name">Akash Roy</li>
+                                    <li class="profile-desig">Operation Manager</li>
+                                </ul>
+                            </div>
+                            <div class="profile-img-wrap">
+                                <div class="profile-img-container">
+                                    <img src="./images/musk.jpg" width="40" class="dropbtn" role="button"
+                                        onclick="profileFunction();">
+                                </div>
+                                <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                    <ul class="pop-profile-list">
+                                        <li><a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                        </li>
+                                        <li><a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a></li>
+                                        <li><a href="#"><i data-feather="settings"></i>&nbsp;Settings</a></li>
+                                        <li><a href="./index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </header>
         <section class="layout-body">
@@ -613,68 +599,59 @@
     <!-- mmenu js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js" integrity="sha512-D1qgHT+xXRgN9gLLLYHbQ/c8wkrADqfXg1kr1dRbP9nOtNzIKKNDU+hmFqR1fSbsU1YFBkw6TbvfZo+SyI0K6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
-<!-- <script>
-    $('.value').each(function() {
-        var text = $(this).text();
-        $(this).parent().css('width', text);
-    });
 
-    $('.block').tooltip();
-</script> -->
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" }, { role: 'annotation' }  ],
+            ["2000", 2400, "#ff739a", '45' ],
+            ["2010", 5400, "#a057ff", '75'],
+            ["2011", 750, "#3dbfa0", '10'],
+            ["2015", 850, "#efc9bb", '15'],
+            ["2020", 600, "#9c58ff", '6'],
+        ]);
 
-<script type="text/javascript">
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "Density", { role: "style" }, { role: 'annotation' }  ],
-        ["2000", 2400, "#ff739a", '45' ],
-        ["2010", 5400, "#a057ff", '75'],
-        ["2011", 750, "#3dbfa0", '10'],
-        ["2015", 850, "#efc9bb", '15'],
-        ["2020", 600, "#9c58ff", '6'],
-      ]);
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                        { 
+                            calc: "stringify",
+                            sourceColumn: 3,
+                            type: "string",
+                            role: "annotation" },
+                        2]);
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { 
-                        calc: "stringify",
-                         sourceColumn: 3,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        // title: "Density of Precious Metals, in g/cm^3",
-        // width: 755,
-        // height: 300,
-        // border:true,
-        bar: {groupWidth: "85%"},
-        legend: { position: "none" },
-        isStacked: true,
-        hAxis: {
-            minValue: 0,
-            ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000],
-            // maxlines: 7;
-        }
-      };
-
-      var options_stacked = {
-          isStacked: true,
-          height: 300,
-        //   legend: {position: 'bottom', maxLines: 7},
-          
+        var options = {
+            // title: "Density of Precious Metals, in g/cm^3",
+            // width: 755,
+            // height: 300,
+            // border:true,
+            bar: {groupWidth: "85%"},
+            legend: { position: "none" },
+            isStacked: true,
+            hAxis: {
+                minValue: 0,
+                ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000],
+                // maxlines: 7;
+            }
         };
 
-      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
-      chart.draw(view, options);
-  }
-  </script>
+        var options_stacked = {
+            isStacked: true,
+            height: 300,
+            //   legend: {position: 'bottom', maxLines: 7},
+            
+            };
+
+        var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
 
     <script>
         feather.replace()
     </script>
-
 </body>
 
 </html>
