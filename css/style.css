@@ -2142,8 +2142,6 @@ body {
   background: linear-gradient(-45deg, #F1F6F9, #FFF5FD, #F4F4F2);
   background-size: 300% 300%;
   position: relative;
-  -webkit-animation: change 10s ease-in-out infinite;
-          animation: change 10s ease-in-out infinite;
 }
 
 @-webkit-keyframes change {
