@@ -92,7 +92,7 @@ a {
     position: absolute;
     right: 10px;
 }
-
+.mm-menu{display: none;}
 
 
 
@@ -2709,73 +2709,7 @@ background: #f2f2f2;
         .layout-body {
             padding: 18px 0px;
         }
-    }
-
-    @media (max-width:720px) {
-        .stat-progess-bar {
-            display: inherit;
-        }
-
-        .stat-progess-bar .circle-wrap {
-            width: 100%;
-            display: flex;
-            align-items: center;
-
-            .prog-wrap {
-                width: 33.33%;
-            }
-        }
-        .layout-body .view-platform-card .view-platform-card-1 .msg-sec {
-            width: fit-content !important;
-            
-        }
-        .stat-progess-bar .first-bar-line::after {
-            position: absolute;
-            content: "";
-            background-color: #ddd;
-            height: 50%;
-            width: 1px;
-            right: 0;
-            left: 0;
-            top: inherit;
-            bottom: 0;
-            margin: 0 auto;
-            z-index: 1;
-        }
-
-        .stat-progess-bar .bar-line::before {
-            position: absolute;
-            content: "";
-            background-color: #ddd;
-            height: 100%;
-            width: 1px;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            margin: 0 auto;
-            z-index: 1;
-            right: 0;
-        }
-
-        .stat-progess-bar .last-bar-line::before {
-            position: absolute;
-            content: "";
-            background-color: #ddd;
-            height: 50%;
-            width: 1px;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            margin: 0 auto;
-            z-index: 1;
-            right: 0;
-        }
-        
-        
-        
-    }
-
-    @media (max-width:575px) {
+        .mm-menu{display: block;}
         .sm-res-space {
             padding-top: 25px;
         }
@@ -2811,9 +2745,6 @@ background: #f2f2f2;
         .layout-body .create-evnt-tab-sec {
             height: 765px !important;
         }
-    }
-
-    @media (max-width:480px) {
         .show-content{
             display: block !important;
         }
@@ -2848,10 +2779,6 @@ background: #f2f2f2;
             
                 }
             }
-        }
-
-        .sm-pad {
-            padding: 0 !important;
         }
 
         .custom-d-sm-none {
