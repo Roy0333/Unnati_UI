@@ -2243,6 +2243,58 @@ a {
   display: none;
 }
 
+.login-pg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-image: url(../images/login-pg-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.login-form-wrap {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  width: 400px;
+}
+
+.login-form-wrap .frm-label {
+  color: #151521;
+}
+
+.login-form-wrap p {
+  font-size: 14px;
+  color: #6d7781;
+  padding-bottom: 15px;
+  font-weight: 500;
+}
+
+.login-form-wrap a {
+  background-color: #01afae;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
 .fixed-search-panel {
   background-color: #fff;
   width: 330px;
@@ -5067,6 +5119,15 @@ a {
 }
 
 @media (max-width: 767px) {
+  .login-form-wrap {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    width: 100%;
+  }
   .res-space {
     padding-top: 25px;
   }
@@ -5131,26 +5192,6 @@ a {
   }
   .note-cntnt ul {
     margin-bottom: 15px;
-  }
-  .log-flex-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-  }
-  .log-flex-wrap .login-form-wrap {
-    height: initial;
-    height: 100vh;
-    padding: 200px 35px;
-  }
-  .log-flex-wrap .login-form-wrap .input-icon {
-    right: 80px !important;
   }
   .custom-d-sm-none {
     display: none;
@@ -5458,12 +5499,6 @@ a {
   -webkit-transform: scale(1);
           transform: scale(1);
   margin: .1rem .6rem !important;
-}
-
-.login-form-wrap {
-  padding: 130px 80px 60px 80px;
-  background-color: #f8f8f8;
-  height: 100vh;
 }
 
 .login-form-wrap h3 {

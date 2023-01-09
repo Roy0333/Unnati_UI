@@ -48,87 +48,32 @@
 </head>
 
 <body>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 custom-d-sm-none p-0 login-left-sec">
-                    <div class="col liquid">
-                        <img src="./images/login-logo.png" alt="Logo" class="img-fluid p-2" style="width: 70px; height: 70px;">
-    
-                        <!-- Owl-Carousel -->
-    
-                        <div class="owl-carousel owl-theme">
-                            <img src="./images/transparent.png" alt="" class="login_img" style="width: 100%;">
-                            <img src="./images/MicrosoftTeams-image (3).png" alt="" class="login_img">
-                            <img src="./images/MicrosoftTeams-image (1).png" alt="" class="login_img">
-                            <img src="./images/MicrosoftTeams-image (5).png" alt="" class="login_img">
-                            <img src="./images/MicrosoftTeams-image (2).png" alt="" class="login_img">
-                        </div>
-    
-                        <!-- /Owl-Carousel -->
-    
-                        <!-- <div class="follow">
-                            Follow us <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-twitter"></i>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-md-4 sm-pad p-0" style="padding-right: 0;">
-                    <div class="log-flex-wrap">
-                        <div class="login-form-wrap">
-                            <h3>Welcome to IIT Dean</h3>
-                            <p>Please sign-in to your account</p>
-                            <form>
-                                <div class="form-label">
-                                    <label class="frm-label">Email</label>
-                                    <input type="email" class="form-control pe-4"/>
-                                    <div class="input-icon">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div class="form-label">
-                                    <label class="frm-label">Password</label>
-                                    <input type="password" class="form-control pe-4"/>
-                                    <div class="input-icon">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div class="form-label mt-3">
-                                    <input type="checkbox" />&nbsp;&nbsp;&nbsp;Remember Me
-                                </div>
-                                <div class="form-label login-btn">
-                                    <a class="" href="./dashboard.html">Log In</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <div class="login-pg-wrapper">
+        <div class="login-form-wrap">
+            <div class="logo-container text-center big-screen-logo light-mood-logo">
+                <img src="./images/login-logo.png" alt="Unnati logo">
             </div>
+            <p class="text-center mt-3">Please sign-in to your account</p>
+            <form>
+                <div class="form-label">
+                    <label class="frm-label">Email</label>
+                    <input type="email" class="form-control" />
+                </div>
+                <div class="form-label">
+                    <label class="frm-label">Password</label>
+                    <input type="password" class="form-control" />
+                </div>
+                <div class="form-label">
+                    <input type="checkbox" class="m-0"/>&nbsp;&nbsp;&nbsp;Remember Me
+                </div>
+                <div class="form-label">
+                    <a class="login-btn" href="./dashboard.html">Log In</a>
+                </div>
+               
+            </form>
         </div>
-    </section>
-    <!--Toggle js-->
-    <script src="./js/toggle.js"></script>
-    <script src="./js/mobile_toggle.js"></script>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                items: 1
-            });
-        });
-    </script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>
