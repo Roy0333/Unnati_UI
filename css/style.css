@@ -2260,7 +2260,7 @@ a {
 }
 
 .login-form-wrap {
-  padding: 2rem;
+  padding: 10rem 2rem 2rem 2rem;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 6px;
   -webkit-backdrop-filter: blur(8px);
@@ -5122,7 +5122,7 @@ a {
             align-items: flex-end;
   }
   .login-form-wrap {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     background: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
