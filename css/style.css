@@ -2247,12 +2247,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   height: 100vh;
   background-image: url(../images/login-pg-bg-2.jpg);
   background-position: center;
@@ -5119,6 +5116,11 @@ a {
 }
 
 @media (max-width: 767px) {
+  .login-pg-wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   .login-form-wrap {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.7);
@@ -5127,6 +5129,9 @@ a {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .res-space {
     padding-top: 25px;
