@@ -118,7 +118,7 @@
                                 <div class="drop-down-menu shadow-main">
                                     <ul>
                                         <li><a href="./role.html"> Add Role</a></li>
-                                        <li><a href="./assign-role.html"> Assign Role</a></li>
+                                        <li><a href="./assign-role.html">Assign role</a></li>
                                         <li><a href="./master-data.html"> Master Data</a></li>
                                         <li><a href="../add-user.html"> Add user</a></li>
                                         <li><a href="../view-user.html"> View user</a></li>
@@ -696,6 +696,28 @@
         </div>
         <script>
             feather.replace();
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("select")
+                    .change(function () {
+                        $(this)
+                            .find("option:selected")
+                            .each(function () {
+                                var optionValue = $(this).attr("value");
+                                if (optionValue) {
+                                    $(".box")
+                                        .not("." + optionValue)
+                                        .hide();
+                                    $("." + optionValue).show();
+                                } else {
+                                    $(".box").hide();
+                                }
+                            });
+                    })
+                    .change();
+                    
+                    });
         </script>
         <!-- mmenu js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js" integrity="sha512-D1qgHT+xXRgN9gLLLYHbQ/c8wkrADqfXg1kr1dRbP9nOtNzIKKNDU+hmFqR1fSbsU1YFBkw6TbvfZo+SyI0K6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
