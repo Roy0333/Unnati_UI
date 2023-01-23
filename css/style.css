@@ -2874,7 +2874,7 @@ a {
 .layout-header .nav-menu .nav-menu-list .drop-down-menu {
   position: absolute;
   opacity: 0;
-  right: 0;
+  right: -30px;
   visibility: hidden;
   background-color: #fff;
   padding: 10px 0;
