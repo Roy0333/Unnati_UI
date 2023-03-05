@@ -1666,6 +1666,7 @@ background: #f2f2f2;
             border-radius:6px;
             box-shadow: 0 0 7px 1px #dfdfdf;
             padding: 10px 15px;
+            overflow-x: scroll;
             .box-cont{
                 width: 100%;
                 margin: 20px auto;
@@ -3006,7 +3007,7 @@ background: #f2f2f2;
         font-weight: 700;
     }
 }
-.login-btn a{
+.login-btn{
 background: linear-gradient(90deg, rgba(97,208,227,1) 0%, rgba(30,111,173,1) 0%, rgba(0,212,255,1) 100%) !important;
 }
 .owl-carousel{

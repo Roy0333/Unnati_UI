@@ -4013,6 +4013,7 @@ a {
   -webkit-box-shadow: 0 0 7px 1px #dfdfdf;
           box-shadow: 0 0 7px 1px #dfdfdf;
   padding: 10px 15px;
+  overflow-x: scroll;
 }
 
 .layout-body .list-sec-cont .tab-sec .list-pannel .box-cont {
@@ -5451,7 +5452,7 @@ a {
   font-weight: 700;
 }
 
-.login-btn a {
+.login-btn {
   background: -webkit-gradient(linear, left top, right top, from(#61d0e3), color-stop(0%, #1e6fad), to(#00d4ff)) !important;
   background: linear-gradient(90deg, #61d0e3 0%, #1e6fad 0%, #00d4ff 100%) !important;
 }
